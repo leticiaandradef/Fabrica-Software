@@ -44,7 +44,17 @@
                  <input type="radio" name="entrega" value="loja"> <label>Retirada na Loja</label>
              </div>
              <div class="option">
-                 <input type="radio" name="entrega" value="domicilio"> <label>Entrega (Delivery)</label>
+                 <input type="radio" name="entrega" id="select-entrega"     onchange="redirecionarPagina()" value="/endereco de entrega/index.html"></input>
+                 <label>Entrega (Delivery)</label>
+                 <script>
+                  function redirecionarPagina() {
+                  var select = document.getElementById("select-entrega");
+                  var opcaoSelecionada = select.value;
+                  if(opcaoSelecionada) {
+                      window.location.href = opcaoSelecionada;
+                     }
+                  }
+              </script>
              </div>
          </div>
 
